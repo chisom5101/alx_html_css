@@ -1,0 +1,198 @@
+/* Reset and basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+/* Header with horizontal nav */
+header {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section with background and centered content */
+.hero {
+  height: 100vh;
+  background: url('img/headphones_hero_1.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), #000 90%);
+  z-index: 1;
+}
+
+/* Content box */
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 40px 50px;
+  max-width: 700px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+button {
+  background-color: #f04e60;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 30px;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d63d4e;
+}
+
+.description {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+/* What We Do Section */
+.what-we-do {
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.what-we-do h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.what-we-do .description {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #444;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.service-card {
+  width: 200px;
+  text-align: center;
+}
+
+.service-card img {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .content {
+    padding: 30px 30px;
+    max-width: 90vw;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .subtitle,
+  .description {
+    font-size: 12px;
+  }
+
+  button {
+    padding: 10px 25px;
+    font-size: 13px;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+}
