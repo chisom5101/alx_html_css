@@ -34,5 +34,5 @@ Figma for design reference
 To run this project locally:
 
 Clone the repo:
-git clone https://github.com/your-username/alx_html_css.git
+git clone https://github.com/chisom5101/alx_html_css.git
 cd alx_html_css/headphones
