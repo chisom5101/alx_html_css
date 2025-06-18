@@ -1,50 +1,75 @@
-/* Reset and basics */
+/* Reset and base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, html {
-  height: 100%;
+html, body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
+  background-color: #000;
+  margin: 0 auto;
 }
 
-/* Header with horizontal nav */
+/* Header */
 header {
   position: absolute;
   top: 30px;
   left: 40px;
   right: 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  z-index: 2;
+  justify-content: space-between;
+  z-index: 10;
+  flex-wrap: wrap;
 }
 
 .logo img {
   width: 120px;
 }
 
+/* Hamburger hidden checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 11;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+}
+
+/* Nav links */
 .nav-links {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 30px;
 }
 
 .nav-links li a {
-  color: white;
   text-decoration: none;
+  color: white;
   font-size: 14px;
   opacity: 0.9;
 }
 
 .nav-links li a:hover {
-  text-decoration: underline;
+  color: #FF6565;
+  opacity: 1;
 }
 
-/* Hero section with background and centered content */
+/* Hero section */
 .hero {
   height: 100vh;
   background: url('img/headphones_hero_1.jpg') no-repeat center center/cover;
@@ -55,17 +80,8 @@ header {
   padding: 0 20px;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), #000 90%);
-  z-index: 1;
-}
 
-/* Content box */
+
 .content {
   position: relative;
   z-index: 2;
@@ -75,105 +91,68 @@ header {
 }
 
 h1 {
-  font-weight: 600;
   font-size: 28px;
+  font-weight: 600;
   margin-bottom: 12px;
 }
 
 .subtitle {
-  font-weight: 400;
   font-size: 14px;
   margin-bottom: 20px;
   color: #ddd;
 }
 
 button {
-  background-color: #f04e60;
+  background: #f04e60;
   border: none;
   border-radius: 30px;
   padding: 12px 30px;
-  color: white;
+  color: #fff;
   font-weight: 700;
   font-size: 14px;
-  cursor: pointer;
   margin-bottom: 25px;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
 button:hover {
-  background-color: #d63d4e;
+  opacity: 0.9;
 }
 
 .description {
   font-size: 13px;
-  line-height: 1.5;
   color: #ccc;
+  line-height: 1.5;
 }
 
-/* What We Do Section */
-.what-we-do {
-  background-color: #fff;
-  color: #000;
-  text-align: center;
-  padding: 60px 20px;
-}
 
-.what-we-do h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.what-we-do .description {
-  max-width: 800px;
-  margin: 0 auto 60px;
-  line-height: 1.6;
-  font-size: 15px;
-  color: #444;
-}
-
-.services {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.service-card {
-  width: 200px;
-  text-align: center;
-}
-
-.service-card img {
-  height: 50px;
-  margin-bottom: 20px;
-}
-
-.service-card h3 {
-  margin-bottom: 10px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.service-card p {
-  font-size: 14px;
-  color: #555;
-}
-
-/* Responsive tweaks */
+/* Mobile Styles */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+  .hamburger {
+    display: flex;
   }
 
   .nav-links {
+    display: none;
     flex-direction: column;
-    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    background: #111;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+
+  .menu-toggle:checked ~ .hamburger ~ .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
   }
 
   .content {
-    padding: 30px 30px;
+    padding: 30px 20px;
     max-width: 90vw;
   }
 
@@ -193,6 +172,6 @@ button:hover {
 
   .services {
     flex-direction: column;
-    align-items: center;
+    gap: 30px;
   }
 }
