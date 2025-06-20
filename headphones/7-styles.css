@@ -490,3 +490,76 @@ button:hover {
   font-size: 0.9rem;
   color: #ccc;
 }
+.pentagon-shape {
+  width: 140px;
+  height: 140px;
+  background-color: #ff6565;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.pentagon-text {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.pentagon-text .percent {
+  font-size: 20px;
+}
+
+.pentagon-text .label {
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: normal;
+}
+/* === Animations for 'What we do…' icons === */
+.icon-item {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.icon-item:hover {
+  transform: scale(1.1) rotate(3deg);
+  opacity: 0.9;
+}
+
+/* Optional bouncing animation (runs constantly) */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.icon-item i {
+  animation: bounce 2s infinite;
+}
+
+/* === Animations for 'Our results' pentagons === */
+.result-item {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.result-item:hover {
+  transform: scale(1.05) rotate(-2deg);
+  opacity: 0.95;
+}
+
+/* Optional floating animation for constant motion */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.result-item .pentagon {
+  animation: float 3s ease-in-out infinite;
+}
