@@ -1,4 +1,29 @@
-/* =============== Font Icon Setup =============== */
+@media (max-width: 480px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+}/* =============== Font Icon Setup =============== */
 @font-face {
   font-family: 'holberton_school-icon';
   src: url('fonts/holberton_school-icon.eot');
