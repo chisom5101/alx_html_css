@@ -103,7 +103,7 @@ color:transparent;
 /* =============== Hero Section =============== */
 .hero {
   height: 100vh;
-  background: url('img/headphones_hero_1.jpg') no-repeat center center/cover;
+  background: url('img/headphones_hero_2.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
